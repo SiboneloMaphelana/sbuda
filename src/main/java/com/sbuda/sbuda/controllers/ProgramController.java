@@ -40,4 +40,10 @@ public class ProgramController {
     public Optional<Program> getProgram(@RequestParam Integer id){
         return programService.getProgramById(id);
     }
+
+    //DELETE A STUDENT
+    @DeleteMapping("/delete-program/{id}")
+    public void removeProgram(@PathVariable Integer id){
+        programService.deleteProgram(id);
+    }
 }
